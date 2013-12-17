@@ -85,6 +85,7 @@ div, li {
     .skills-title {
       width: 100%;
       background-color: white;
+      border: 1px solid transparent;
       @include transition(0.2s);
 
       a, h1 {
@@ -96,47 +97,52 @@ div, li {
       }
 
       &:hover {
-        text-decoration: underline;
+        border: 1px solid black;
         @include transition(0.2s);
       }
     }
-    ul {
+    .skills-list {
       width: 100%;
-      margin-top: 1em;
-      list-style-type: none;
-      text-align: left;
-      display: none;
-      @include futura(1em, white);
-      a li {
-        float: left;
-        background-color: white;
-        color: black;
-        opacity: 0.8;
-        @include transition(0.2s);
-        img {
-          float: right;
-          width: 30px;
-          padding-left: 0.2em;
-          padding-right: 0.2em;
-        }
-
-        &:hover {
-          opacity: 1;
-          @include transition(0.2s);
-        }
-      }
-      li {
-        width: 25%;
-        background-color: transparent;
-        padding: 0.5em;
-        margin: 1em;
-        text-align: center;
-        @include transition(0.2s);
-
-        &:hover {
-          background-color: yellow;
+      float: left;
+      height: 16em;
+      ul {
+        width: 100%;
+        margin-top: 1em;
+        list-style-type: none;
+        text-align: left;
+        // display: none;
+        @include futura(1em, white);
+        a li {
+          float: left;
+          background-color: white;
           color: black;
+          opacity: 0.8;
           @include transition(0.2s);
+          img {
+            float: right;
+            width: 30px;
+            padding-left: 0.2em;
+            padding-right: 0.2em;
+          }
+
+          &:hover {
+            opacity: 1;
+            @include transition(0.2s);
+          }
+        }
+        li {
+          width: 25%;
+          background-color: transparent;
+          padding: 0.5em;
+          margin: 1em;
+          text-align: center;
+          @include transition(0.2s);
+
+          &:hover {
+            background-color: yellow;
+            color: black;
+            @include transition(0.2s);
+          }
         }
       }
     }

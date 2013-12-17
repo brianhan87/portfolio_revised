@@ -3,6 +3,6 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $('div.skills-title').on('click', function(){
-  $(this).next('ul').slideToggle(300);
+  $(this).next('div').slideToggle(300);
   return false;
 });
