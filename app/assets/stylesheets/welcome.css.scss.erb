@@ -33,23 +33,57 @@
   transition: $duration;
 }
 
-div, li {
+@mixin border-left-bottom-white {
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+@mixin one-border($direction, $color) {
+  border-#{$direction}: 3px solid $color;
+}
+
+div, 
+ul,
+li, 
+.skills-left,
+.contact-list {
   float: left;
 }
 
-#top {
+.skills, 
+.about, 
+.links,
+.contact {
+  width: 20%;
+}
+
+ul,
+#top,
+.profile,
+.skills-title,
+.skills-list, 
+.about-title,
+.about-text,
+.links-title, 
+.links-list, 
+.contact-title,
+.contact-list {
   width: 100%;
-  height: 50em;
+}
+
+li, h1 {
+  text-align: center;
+}
+
+#top {
+  height: 69em;
   background-image: url(<%= asset_path 'calipixel.jpg' %>);
   -webkit-background-size: 100%;
   background-size: 100%;
   .title {
     width: 80%;
     margin-left: 10%;
-    border-top: 3px solid white;
-    border-left: 3px solid white;
-    border-right: 3px solid white;
-
+    border: 3px solid white;
     h1 {
       padding-top: 0.5em;
       padding-bottom: 0.5em;
@@ -59,83 +93,48 @@ div, li {
   }
 
   .profile {
-    width: 100%;
     margin-top: 1em;
     padding: 1em;
     img {
       width: 10%;
       margin-left: 45%;
       border-radius: 100%;
-      opacity: 0.7;
-      @include transition(0.2s);
-
-      &:hover {
-        opacity: 1;
-        @include transition(0.2s);
-      }
     }
   }
 
   .skills {
-    width: 40%;
     margin-left: 10%;
-    border-left: 3px solid white;
-    border-top: 3px solid white;
-    border-bottom: 3px solid white;
+    
     .skills-title {
-      width: 100%;
-      background-color: white;
-      border: 1px solid transparent;
+      background-color: transparent;
+      @include border-left-bottom-white;
       @include transition(0.2s);
 
-      a, h1 {
-        color: black;
+      h1 {
         font-style: italic;
-        text-align: center;
-        @include futura(1.2em, black);
+        @include futura(1.5em, white);
         @include transition(0.2s);
       }
 
       &:hover {
-        border: 1px solid black;
+        color: black;
+        background-color: green;
         @include transition(0.2s);
       }
     }
     .skills-list {
-      width: 100%;
-      float: left;
       height: 16em;
+      padding: 0;
       ul {
-        width: 100%;
-        margin-top: 1em;
+        margin-top: 0.5em;
         list-style-type: none;
         text-align: left;
-        // display: none;
-        @include futura(1em, white);
-        a li {
-          float: left;
-          background-color: white;
-          color: black;
-          opacity: 0.8;
-          @include transition(0.2s);
-          img {
-            float: right;
-            width: 30px;
-            padding-left: 0.2em;
-            padding-right: 0.2em;
-          }
-
-          &:hover {
-            opacity: 1;
-            @include transition(0.2s);
-          }
-        }
+        @include futura(0.8em, white);
+        
         li {
-          width: 25%;
+          width: 10em;
           background-color: transparent;
-          padding: 0.5em;
-          margin: 1em;
-          text-align: center;
+          margin-top: 0.5em;
           @include transition(0.2s);
 
           &:hover {
@@ -147,18 +146,87 @@ div, li {
       }
     }
   }
-  .about {
-    width: 40%;
-    padding: 2.5em;   
-    border: 3px solid white;
+
+
+  .about-title {
+    background-color: transparent;
+    @include border-left-bottom-white;
+
+    @include transition(0.2s);
+    h1 {
+      font-style: italic;
+      @include futura(1.5em, white);
+    }
+    &:hover {
+      background-color: tomato;
+    }
+  }
+  .about-text {
+    float: left;
+    padding: 1.5em;
     p {
       text-align: left;
       margin-top: 0.5em; 
-      @include futura(1em, white);
-
+      @include futura(0.8em, white);
     }
   }
-}
+  
 
+  .links-title {
+    background-color: transparent;
+    @include border-left-bottom-white;
+    
+    @include transition(0.2s);
+    h1 {
+      font-style: italic;
+      @include futura(1.5em, white);
+    }
+    &:hover {
+      background-color: orange;
+    }
+  }
+
+  .links-list ul {
+    margin-top: 0.5em;
+    list-style-type: none;
+    text-align: left;
+    @include futura(0.8em, white);
+    
+    li {
+      width: 10em;
+      background-color: transparent;
+      margin-top: 0.5em;
+      @include transition(0.2s);
+
+      &:hover {
+        background-color: yellow;
+        color: black;
+        @include transition(0.2s);
+      }
+    }
+  }
+
+  .contact-title {
+    background-color: transparent;
+    @include border-left-bottom-white;
+    @include one-border(right, white);
+    @include transition(0.2s);
+    h1 {
+      font-style: italic;
+      @include futura(1.5em, white);
+    }
+    &:hover {
+      background-color: blue;
+    }
+  }
+  .contact-list {
+    padding: 1.5em;
+    p {
+      text-align: left;
+      margin-top: 0.5em; 
+      @include futura(0.8em, white);
+    }
+  } 
+}
 
 
