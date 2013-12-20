@@ -1,12 +1,12 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "foundation/components/tables";
+
 @import "welcome-mixins";
 @import "welcome-variables";
 
-* {
-  // display: block;
+body {
+  margin: 0;
 }
 
 
@@ -37,7 +37,7 @@ h1 {
 }
 
 #top {
-  height: 83em;
+  height: 100%;
   background-image: url(<%= asset_path 'calipixel.jpg' %>);
   -webkit-background-size: 100%;
   background-size: 100%;
@@ -58,6 +58,7 @@ h1 {
       padding-top: 1em;
       padding-bottom: 1em;
       font-weight: lighter;
+      text-decoration: none;
       border-top: $border-style;
       @include helvetica(1em, white);
       &:hover {
