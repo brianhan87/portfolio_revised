@@ -5,6 +5,13 @@
 @import "welcome-mixins";
 @import "welcome-variables";
 
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -37,7 +44,7 @@ h1 {
 }
 
 #top {
-  height: 100%;
+  height: 90%;
   background-image: url(<%= asset_path 'calipixel.jpg' %>);
   -webkit-background-size: 100%;
   background-size: 100%;
@@ -120,10 +127,11 @@ h1 {
       padding-top: 1em;
       padding-bottom: 1em;
       border: 1px solid white;
-      @include futura(1em, white);
+      text-decoration: none;
+      @include futura(1em, black);
+      background-color: white;
       &:hover {
-        background-color: white;
-        color: black;
+        text-decoration: underline;
       }
     }
   }
