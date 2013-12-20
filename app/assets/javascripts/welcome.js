@@ -3,35 +3,35 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-// $('.skills-title').on('click', function(event){
-//   $('.about-text').slideUp(400);
-//   $('.links-list').slideUp(400);
-//   $('.contact-list').slideUp(400);
+$('.skills-title').on('click', function(event){
+  $('.about-text').slideUp(400);
+  $('.links-list').slideUp(400);
+  $('.contact-list').slideUp(400);
 
-//   $('.skills-list').slideToggle(400, function() {
-//     var lightGreen  = 'hsla(113, 52%, 43%, 0.42)',
-//         skills      = $('.skills'),
-//         skillsTitle = $('.skills-title'); 
+  $('.skills-list').slideToggle(400, function() {
+    var lightGreen  = 'hsla(113, 52%, 43%, 0.42)',
+        skills      = $('.skills'),
+        skillsTitle = $('.skills-title'); 
 
-//     if ($(this).is(':hidden')) {
-//       skills.css({
-//         'border-bottom': '0', 
-//         'background-color': 'transparent' }).animate({opacity: '0.5'}, 100);
-//       skillsTitle.css({
-//         'border-bottom': '3px solid white',
-//         'border-left': '3px solid white',
-//         'background-color': 'transparent'
-//       });
+    if ($(this).is(':hidden')) {
+      skills.css({
+        'border-bottom': '0', 
+        'background-color': 'transparent' }).animate({opacity: '0.5'}, 100);
+      skillsTitle.css({
+        'border-bottom': '3px solid white',
+        'border-left': '3px solid white',
+        'background-color': 'transparent'
+      });
 
-//     } else {
-//       skills.animate({ opacity: '1' }, 100);
-//       skillsTitle.css({
-//         'border-left': '3px solid white'
-//       });
-//     }
-//   });
-//   event.preventDefault();
-// });
+    } else {
+      skills.animate({ opacity: '1' }, 100);
+      skillsTitle.css({
+        'border-left': '3px solid white'
+      });
+    }
+  });
+  event.preventDefault();
+}); 
 
 // $('.about-title').on('click', function(event){
 //   $('.skills-list').slideUp(400);

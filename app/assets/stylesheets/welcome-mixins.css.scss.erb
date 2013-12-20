@@ -1,0 +1,35 @@
+@mixin helvetica($size, $color) {
+  font-size: $size;
+  font-family: "HelveticaNeue", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color;
+  letter-spacing: 0.4em;
+}
+
+@mixin futura($size, $color) {
+  font-size: $size;
+  font-family: "Futura", "HelveticaNeue", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color;
+  letter-spacing: 0.1em;
+}
+
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+  -ms-transition: $duration;
+  -o-transition: $duration;
+  transition: $duration;
+}
+
+@mixin border-left-bottom-white {
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+@mixin one-border($direction, $color) {
+  border-#{$direction}: 3px solid $color;
+}

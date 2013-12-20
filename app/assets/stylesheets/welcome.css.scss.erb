@@ -6,46 +6,9 @@
 //   width: $width;
 // }
 @import "foundation/components/tables";
-
-@mixin helvetica($size, $color) {
-  font-size: $size;
-  font-family: "HelveticaNeue", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  color: $color;
-  letter-spacing: 0.4em;
-}
-
-@mixin futura($size, $color) {
-  font-size: $size;
-  font-family: "Futura", "HelveticaNeue", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $color;
-  letter-spacing: 0.1em;
-}
-
-@mixin transition($duration) {
-  -webkit-transition: $duration;
-  -moz-transition: $duration;
-  -ms-transition: $duration;
-  -o-transition: $duration;
-  transition: $duration;
-}
-
-@mixin border-left-bottom-white {
-  border-left: 3px solid white;
-  border-bottom: 3px solid white;
-}
-
-@mixin one-border($direction, $color) {
-  border-#{$direction}: 3px solid $color;
-}
+@import "welcome-mixins";
 
 div, 
-ul,
-li,
 p, 
 .skills-left,
 .contact-list {
@@ -59,7 +22,6 @@ p,
   width: 20%;
 }
 
-ul,
 #top,
 .profile,
 .skills-title,
@@ -73,7 +35,15 @@ ul,
   width: 100%;
 }
 
-li, h1 {
+.skills-list, 
+.about-text, 
+.links-list,
+.contact-list {
+  height: 20em;
+}
+
+
+h1 {
   text-align: center;
 }
 
@@ -125,7 +95,6 @@ li, h1 {
       }
     }
     .skills-list {
-      height: 16em;
       p {
         width: 50%;
         height: 5em;
@@ -133,6 +102,7 @@ li, h1 {
         padding: 0.5em;
         @include border-left-bottom-white;
         @include futura(0.9em, white);
+        // visibility: hidden;
       }
     }
     .skills-chart {
@@ -158,16 +128,13 @@ li, h1 {
   }
   .about-text {
     float: left;
-    padding: 1.5em;
     @include border-left-bottom-white;
     p {
       text-align: left;
-      margin-top: 0.5em; 
       @include futura(0.8em, white);
     }
   }
   
-
   .links-title {
     background-color: transparent;
     @include border-left-bottom-white;
@@ -182,11 +149,12 @@ li, h1 {
     }
   }
 
-  .links-list ul {
-    margin-top: 0.5em;
+  .links-list {
+    // margin-top: 0.5em;
     list-style-type: none;
     text-align: left;
     @include futura(0.8em, white);
+    @include border-left-bottom-white;
     
   }
 
@@ -205,6 +173,9 @@ li, h1 {
   }
   .contact-list {
     padding: 1.5em;
+    border-right: 3px solid white;
+    @include border-left-bottom-white;
+
     p {
       text-align: left;
       margin-top: 0.5em; 
