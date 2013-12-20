@@ -1,13 +1,14 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// @mixin float-width($float, $width) {
-//   float: $float;
-//   width: $width;
-// }
-// @import "foundation/components/tables";
+@import "foundation/components/tables";
 @import "welcome-mixins";
 @import "welcome-variables";
+
+* {
+  // display: block;
+}
+
 
 nav,
 div, 
@@ -35,9 +36,8 @@ h1 {
   margin-bottom: 0px;
 }
 
-
 #top {
-  height: 80em;
+  height: 83em;
   background-image: url(<%= asset_path 'calipixel.jpg' %>);
   -webkit-background-size: 100%;
   background-size: 100%;
@@ -127,5 +127,4 @@ h1 {
     }
   }
 }
-
 
