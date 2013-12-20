@@ -9,10 +9,6 @@
 @import "welcome-mixins";
 @import "welcome-variables";
 
-body {
-  margin: 0;
-}
-
 nav,
 div, 
 p,
@@ -25,15 +21,7 @@ li,
 }
 
 #top,
-.link,
-
-.skills-list, 
-.about-title,
-.about-text,
-.links-title, 
-.links-list, 
-.contact-title,
-.contact-list {
+.link {
   width: 100%;
 }
 
@@ -41,8 +29,15 @@ h1 {
   text-align: center;
 }
 
+#about, #skills {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
 #top {
-  height: 83em;
+  height: 80em;
   background-image: url(<%= asset_path 'calipixel.jpg' %>);
   -webkit-background-size: 100%;
   background-size: 100%;
@@ -56,173 +51,81 @@ h1 {
       padding-bottom: 0.5em;
       @include helvetica(6em, white);
     }
+    a {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-weight: lighter;
+      border-top: $border-style;
+      @include helvetica(1em, white);
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
   }
 
-  nav {
-    width: 10%;
-    margin-left: 20%; 
-    ul {
-      width: 100%;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      border-left: $border-style;
-      a {
-        text-decoration: none;
-        font-style: italic;
-        @include futura(1.5em, white);
-        li {
-          width: 100%;
-          padding: 2em;
-          border-bottom: $border-style;
-          border-right: $border-style;
-          &:hover {
-            background-color: white;
-            color: black;
-          }
-        }
+  #about {
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    border-bottom: $border-style;
+
+    .about-container {
+      margin-top: 3em;
+      margin-bottom: 3em;
+      margin-left: 2em;
+      margin-right: 2em;
+      p {
+        padding-left: 4em;
+        padding-right: 4em;
+        @include futura(1em, white);
       }
     }
   }
 
   #skills {
-    width: 50%;
-    visibility: hidden;
-    // border-bottom: $border-style;
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    border-left: $border-style;
+
     .skills-list {
       width: 100%;
-      // visibility: hidden;
       p {
         width: 50%;
         margin: 0;
         padding: 1em;
         border-bottom: $border-style;
         border-right: $border-style;
+        text-align: center;
         @include futura(1em, white);
       }
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   .skills {
-//     margin-left: 10%;
-    
-//     .skills-title {
-//       @include border-left-bottom-white;
-//       @include transition(0.2s);
-
-//       h1 {
-//         font-style: italic;
-//         @include futura(1.5em, white);
-//         @include transition(0.2s);
-//       }
-
-//       &:hover {
-//         color: black;
-//         background-color: green;
-//         @include transition(0.2s);
-//       }
-//     }
-//     .skills-list {
-//       p {
-//         width: 50%;
-//         height: 5em;
-//         margin-bottom: 0;
-//         padding: 0.5em;
-//         @include border-left-bottom-white;
-//         @include futura(0.9em, white);
-//         // visibility: hidden;
-//       }
-//     }
-//     .skills-chart {
-//       width: 20%;
-//       float: left;
-//       background-color: white;
-//       clear: both;
-//     }
-//   }
-
-//   .about-title {
-//     background-color: transparent;
-//     @include border-left-bottom-white;
-
-//     @include transition(0.2s);
-//     h1 {
-//       font-style: italic;
-//       @include futura(1.5em, white);
-//     }
-//     &:hover {
-//       background-color: tomato;
-//     }
-//   }
-//   .about-text {
-//     float: left;
-//     @include border-left-bottom-white;
-//     p {
-//       text-align: left;
-//       @include futura(0.8em, white);
-//     }
-//   }
-  
-//   .links-title {
-//     background-color: transparent;
-//     @include border-left-bottom-white;
-    
-//     @include transition(0.2s);
-//     h1 {
-//       font-style: italic;
-//       @include futura(1.5em, white);
-//     }
-//     &:hover {
-//       background-color: orange;
-//     }
-//   }
-
-//   .links-list {
-//     // margin-top: 0.5em;
-//     list-style-type: none;
-//     text-align: left;
-//     @include futura(0.8em, white);
-//     @include border-left-bottom-white;
-    
-//   }
-
-//   .contact-title {
-//     background-color: transparent;
-//     @include border-left-bottom-white;
-//     @include one-border(right, white);
-//     @include transition(0.2s);
-//     h1 {
-//       font-style: italic;
-//       @include futura(1.5em, white);
-//     }
-//     &:hover {
-//       background-color: blue;
-//     }
-//   }
-//   .contact-list {
-//     padding: 1.5em;
-//     border-right: 3px solid white;
-//     @include border-left-bottom-white;
-
-//     p {
-//       text-align: left;
-//       margin-top: 0.5em; 
-//       @include futura(0.8em, white);
-//     }
-//   } 
+  .contact {
+    float: left;
+    width: 20%;
+    padding: 0;
+    margin-left: 40%;
+    margin-top: 5em;
+    a {
+      float: left;
+      width: 100%;
+      text-align: center;
+      font-weight: lighter;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      border: 1px solid white;
+      @include futura(1em, white);
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
 }
 
 

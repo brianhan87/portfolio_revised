@@ -2,36 +2,57 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
+// // Custom Tabs
+// $('#nav-skill').on('click', function(event){
 
-$('.skills-title').on('click', function(event){
-  $('.about-text').slideUp(400);
-  $('.links-list').slideUp(400);
-  $('.contact-list').slideUp(400);
+//   // fadeOut all other tabs
+//   $('#about').css('visibility', 'hidden');
+//   // fadeIn the clicked tab
+//   $('#skills').css('visibility', 'visible');
+//   event.preventDefault();
+// });
 
-  $('.skills-list').slideToggle(400, function() {
-    var lightGreen  = 'hsla(113, 52%, 43%, 0.42)',
-        skills      = $('.skills'),
-        skillsTitle = $('.skills-title'); 
+// $('#nav-about').on('click', function(event){
 
-    if ($(this).is(':hidden')) {
-      skills.css({
-        'border-bottom': '0', 
-        'background-color': 'transparent' }).animate({opacity: '0.5'}, 100);
-      skillsTitle.css({
-        'border-bottom': '3px solid white',
-        'border-left': '3px solid white',
-        'background-color': 'transparent'
-      });
+//   // fadeOut all other tabs
+//   $('#skills').css('visibility', 'hidden');
 
-    } else {
-      skills.animate({ opacity: '1' }, 100);
-      skillsTitle.css({
-        'border-left': '3px solid white'
-      });
-    }
-  });
-  event.preventDefault();
-}); 
+//   // fadeIn the clicked tab
+//   $('#about').css('visibility', 'visible');
+//   event.preventDefault();
+// });
+
+
+
+// $('.skills-title').on('click', function(event){
+//   $('.about-text').slideUp(400);
+//   $('.links-list').slideUp(400);
+//   $('.contact-list').slideUp(400);
+
+//   $('.skills-list').slideToggle(400, function() {
+//     var lightGreen  = 'hsla(113, 52%, 43%, 0.42)',
+//         skills      = $('.skills'),
+//         skillsTitle = $('.skills-title'); 
+
+//     if ($(this).is(':hidden')) {
+//       skills.css({
+//         'border-bottom': '0', 
+//         'background-color': 'transparent' }).animate({opacity: '0.5'}, 100);
+//       skillsTitle.css({
+//         'border-bottom': '3px solid white',
+//         'border-left': '3px solid white',
+//         'background-color': 'transparent'
+//       });
+
+//     } else {
+//       skills.animate({ opacity: '1' }, 100);
+//       skillsTitle.css({
+//         'border-left': '3px solid white'
+//       });
+//     }
+//   });
+//   event.preventDefault();
+// }); 
 
 // $('.about-title').on('click', function(event){
 //   $('.skills-list').slideUp(400);
