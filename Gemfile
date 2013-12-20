@@ -12,8 +12,6 @@ group :development do
   gem 'binding_of_caller'
 end
 
-gem 'foundation-rails'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
