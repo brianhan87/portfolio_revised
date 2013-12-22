@@ -5,135 +5,590 @@
 @import "welcome-mixins";
 @import "welcome-variables";
 
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
+// Laptops at 1300px
+@media screen and (min-width: 81.25em) {
+  
+  .nav {
+    display: none;
+  }
 
+  body {
+    margin: 0;
+  }
 
-nav,
-div, 
-p,
-ul,
-li,
-.nav-links,
-.link, 
-.skills-list {
-  float: left;
-}
+  nav, div, p, ul, li,
+  .nav-links, 
+  .link, 
+  .skills-list {
+    float: left;
+  }
 
-#top,
-.link {
-  width: 100%;
-}
+  #top,
+  .link {
+    width: 100%;
+  }
 
-h1 {
-  text-align: center;
-}
+  h1 {
+    text-align: center;
+  }
 
-#about, #skills {
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+  #about, #skills {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 
-#top {
-  height: 90%;
-  background-image: url(<%= asset_path 'calipixel.jpg' %>);
-  -webkit-background-size: 100%;
-  background-size: 100%;
-  .title {
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 5em;
-    border: $border-style;
-    h1 {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      @include helvetica(6em, white);
+  #top {
+    height: 90%;
+    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    .title {
+      width: 60%;
+      margin-left: 20%;
+      margin-top: 5em;
+      border: $border-style;
+      h1 {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        @include helvetica(6em, white);
+      }
+      a {
+        float: left;
+        width: 33.33%;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-weight: lighter;
+        text-decoration: none;
+        border-top: $border-style;
+        @include helvetica(1em, white);
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
     }
-    a {
+
+    #about {
+      float: left;
+      width: 60%;
+      margin-left: 20%;
+      border-bottom: $border-style;
+
+      .about-container {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        margin-left: 2em;
+        margin-right: 2em;
+        p {
+          padding-left: 4em;
+          padding-right: 4em;
+          @include futura(1em, white);
+        }
+      }
+    }
+
+    #skills {
+      float: left;
+      width: 60%;
+      margin-left: 20%;
+      border-left: $border-style;
+
+      .skills-list {
+        width: 100%;
+        p {
+          width: 50%;
+          margin: 0;
+          padding: 1em;
+          border-bottom: $border-style;
+          border-right: $border-style;
+          text-align: center;
+          @include futura(1em, white);
+        }
+      }
+    }
+    .contact {
       float: left;
       width: 33.33%;
-      text-align: center;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      font-weight: lighter;
-      text-decoration: none;
-      border-top: $border-style;
-      @include helvetica(1em, white);
-      &:hover {
-        background-color: white;
-        color: black;
-      }
-    }
-  }
-
-  #about {
-    float: left;
-    width: 60%;
-    margin-left: 20%;
-    border-bottom: $border-style;
-
-    .about-container {
-      margin-top: 3em;
-      margin-bottom: 3em;
-      margin-left: 2em;
-      margin-right: 2em;
-      p {
-        padding-left: 4em;
-        padding-right: 4em;
-        @include futura(1em, white);
-      }
-    }
-  }
-
-  #skills {
-    float: left;
-    width: 60%;
-    margin-left: 20%;
-    border-left: $border-style;
-
-    .skills-list {
-      width: 100%;
-      p {
-        width: 50%;
-        margin: 0;
-        padding: 1em;
-        border-bottom: $border-style;
-        border-right: $border-style;
-        text-align: center;
-        @include futura(1em, white);
-      }
-    }
-  }
-  .contact {
-    float: left;
-    width: 20%;
-    padding: 0;
-    margin-left: 40%;
-    margin-top: 5em;
-    a {
-      float: left;
-      width: 100%;
-      text-align: center;
-      font-weight: lighter;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      border: 1px solid white;
-      text-decoration: none;
-      @include futura(1em, black);
+      padding: 0;
+      margin-left: 33.33%;
+      margin-top: 5em;
+      padding: 1em;
       background-color: white;
-      &:hover {
-        text-decoration: underline;
+      a {
+        float: left;
+        width: 100%;
+        text-align: center;
+        font-weight: lighter;
+        border: 1px solid white;
+        text-decoration: none;
+        @include futura(1em, black);
+        
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
 }
+
+// Tablets at 998px to 1299px
+@media screen and (min-width: 62.375em) and (max-width: 81.188em) {
+  .anchor {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    -webkit-background-size: 150%;
+    background-size: 150%;
+  }
+  #top {
+
+    min-width: 64em;
+    max-width: 81.88em;
+    height: 100%;
+
+    .title {
+      float: left;
+      width: 70%;
+      height: 100%;
+      margin-top: 2em;
+      margin-left: 15%;
+      margin-bottom: 0;
+      border: $border-style;
+      
+      h1 {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        @include helvetica(5em, white);
+      }
+    }
+
+    .nav {
+      width: 35%;
+      float: left;
+      margin-left: 15%;
+      a {
+        width: 100%;
+        float: left;
+        border-left: $border-style;
+        border-right: $border-style;
+        border-bottom: $border-style;
+        text-align: center;
+        text-decoration: none;
+        @include futura(1em, white);
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+
+    #about {
+      float: left;
+      width: 70%;
+      margin-left: 15%;
+      border-left: $border-style;
+      border-right: $border-style;
+      border-bottom: $border-style;
+      p {
+        @include futura(0.75em, white);
+        margin: 1.5em;
+      }
+    }
+
+    #skills {
+      float: left;
+      clear: both;
+      width: 35%;
+      margin-left: 50%;
+      .skills-list {
+        width: 100%;
+        float: left;
+        border-top: $border-style;
+        border-left: $border-style;
+        
+        p {
+          width: 50%;
+          margin: 0;
+          padding: 1em;
+          float: left;
+          text-align: center;
+          border-bottom: $border-style;
+          border-right: $border-style;
+          @include futura(0.75em, white);
+
+
+        }
+      }
+    }
+
+    .contact {
+      float: left;
+      clear: both;
+      width: 35%;
+      margin-left: 15%;
+      background-color: white;
+      border: $border-style;
+      a {
+        width: 100%;
+        float: left;
+        text-decoration: none;
+        text-align: center;
+        @include futura(1em, black);
+        background-color: white;
+      }
+    }
+  }
+}
+
+// Small Screens at 536px and 997px
+@media screen and (min-width: 33.5em) and (max-width: 62.313em) {
+  .anchor {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    -webkit-background-size: 180%;
+    background-size: 180%;
+  }
+  #top {
+    width: 100%;
+    height: 100%;
+
+    .title {
+      float: left;
+      width: 90%;
+      height: 100%;
+      margin-top: 1em;
+      margin-left: 5%;
+      margin-bottom: 0;
+      border: $border-style;
+      
+      h1 {
+        // padding-top: 0.1em;
+        // padding-bottom: 0.1em;
+        @include helvetica(3.5em, white);
+      }
+    }
+
+    .nav {
+      width: 90%;
+      float: left;
+      margin-left: 5%;
+      border-left: $border-style;
+      a {
+        width: 50%;
+        float: left;
+        border-right: $border-style;
+        border-bottom: $border-style;
+        text-align: center;
+        text-decoration: none;
+        @include futura(1em, white);
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+
+    #about {
+      float: left;
+      width: 90%;
+      margin-left: 5%;
+      border-left: $border-style;
+      border-right: $border-style;
+      border-bottom: $border-style;
+      p {
+        text-align: center;
+        @include futura(0.75em, white);
+        margin: 1.5em;
+      }
+    }
+
+    #skills {
+      float: left;
+      clear: both;
+      width: 90%;
+      margin-top: 2em;
+      margin-left: 5%;
+      .skills-list {
+        width: 100%;
+        float: left;
+        border-top: $border-style;
+        border-left: $border-style;
+        
+        p {
+          width: 50%;
+          margin: 0;
+          padding: 1em;
+          float: left;
+          text-align: center;
+          border-bottom: $border-style;
+          border-right: $border-style;
+          @include futura(0.75em, white);
+
+
+        }
+      }
+    }
+
+    .contact {
+      float: left;
+      clear: both;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 2em;
+      background-color: white;
+      border: $border-style;
+      a {
+        width: 100%;
+        float: left;
+        text-decoration: none;
+        text-align: center;
+        @include futura(1em, black);
+        background-color: white;
+      }
+    }
+  }
+}
+
+
+// phones (landscape mode) at 400px and 535px;
+@media screen and (min-width: 25em) and (max-width: 33.438em) {
+  .anchor {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    -webkit-background-size: 300%;
+    background-size: 300%;
+  }
+  #top {
+    width: 100%;
+    height: 100%;
+
+    .title {
+      float: none;
+      width: 98%;
+      height: 100%;
+      margin-top: 1em;
+      margin-left: 1%;
+      margin-bottom: 0;
+      border: $border-style;
+      
+      h1 {
+        @include helvetica(2em, white);
+      }
+    }
+
+    .nav {
+      width: 98%;
+      float: left;
+      margin-left: 1%;
+      margin-top: 1em;
+
+      a {
+        width: 100%;
+        float: left;
+        margin-bottom: 1em;
+        text-align: center;
+        text-decoration: none;
+        @include futura(1em, black);
+        background-color: white;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        opacity: 0.8;
+      }
+    }
+
+    #about {
+      float: left;
+      width: 98%;
+      margin-left: 1%;
+      border-left: $border-style;
+      border-right: $border-style;
+      border-bottom: $border-style;
+      p {
+        text-align: center;
+        @include futura(0.75em, white);
+        margin: 1.5em;
+      }
+    }
+
+    #skills {
+      float: left;
+      clear: both;
+      width: 98%;
+      margin-top: 1em;
+      margin-left: 1%;
+      .skills-list {
+        width: 100%;
+        float: left;
+        border-top: $border-style;
+        border-left: $border-style;
+        
+        p {
+          width: 50%;
+          margin: 0;
+          padding: 1em;
+          float: left;
+          text-align: center;
+          border-bottom: $border-style;
+          border-right: $border-style;
+          @include futura(0.75em, white);
+
+
+        }
+      }
+    }
+
+    .contact {
+      float: left;
+      clear: both;
+      width: 98%;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      margin-left: 1%;
+      margin-top: 2em;
+      background-color: white;
+      border: $border-style;
+      a {
+        width: 100%;
+        float: left;
+        text-decoration: none;
+        text-align: center;
+        @include futura(1em, black);
+        background-color: white;
+      }
+    }
+  }
+}
+
+
+// phones at 399px;
+@media screen and (max-width: 24.938em) {
+  .anchor {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    -webkit-background-size: 400%;
+    background-size: 400%;
+  }
+  #top {
+    width: 100%;
+    height: 100%;
+
+    .title {
+      float: none;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 0;
+      border-bottom: $border-style;
+      
+      h1 {
+        @include helvetica(2em, white);
+      }
+    }
+
+    .nav {
+      width: 100%;
+      float: left;
+      margin-top: 1em;
+
+      a {
+        width: 33.33%;
+        margin-left: 33.33%;
+        float: left;
+        margin-bottom: 1em;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0px 3px 0px white;
+        @include futura(1em, white);
+
+        padding-top: 1em;
+        padding-bottom: 1em;
+        opacity: 0.8;
+      }
+    }
+
+    #about {
+      float: left;
+      width: 100%;
+      border-bottom: $border-style;
+      p {
+        text-align: center;
+        @include futura(0.75em, white);
+        margin: 1.5em;
+      }
+    }
+
+    #skills {
+      float: left;
+      clear: both;
+      width: 100%;
+      margin-top: 1em;
+
+      .skills-list {
+        width: 100%;
+        float: left;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-top: $border-style;
+        border-bottom: $border-style;
+        
+        p {
+          width: 50%;
+          margin: 0;
+          padding: 1em;
+          float: left;
+          text-align: center;
+          
+          @include futura(0.75em, white);
+
+        }
+      }
+    }
+
+    .contact {
+      float: left;
+      width: 100%;
+      margin-top: 1em;
+      a {
+        width: 100%;
+        float: left;
+        text-decoration: none;
+        text-align: center;
+        @include futura(1em, white);
+
+      }
+    }
+  }
+
+}
+
+// // iPhone portrait mode
+// @media screen and (max-width: 320px) {
+
+// }
 
