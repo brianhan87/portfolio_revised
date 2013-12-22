@@ -12,10 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
 //= require jquery.ui.tabs
 //= require turbolinks
 //= require_tree .
 
-
-$(function(){ $(document).foundation(); });
