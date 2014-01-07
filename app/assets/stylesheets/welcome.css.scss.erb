@@ -68,10 +68,13 @@
         font-weight: lighter;
         text-decoration: none;
         border-top: $border-style;
-        @include helvetica(1em, white);
+        @include helvetica(1em, black);
+        background-color: white;
         &:hover {
-          background-color: white;
-          color: black;
+          background-color: transparent;
+          color: white;
+          text-decoration: underline;
+          // @include one-border(top, orange);
         }
       }
     }
