@@ -46,7 +46,7 @@
 
   #top {
     height: 90%;
-    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'rainbow.jpg' %>)fixed no-repeat;
     -webkit-background-size: 100%;
     background-size: 100%;
     .title {
@@ -54,27 +54,27 @@
       margin-left: 20%;
       margin-top: 5em;
       border: $border-style;
+
       h1 {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+        // padding-top: 0.5em;
+        // padding-bottom: 0.5em;
         @include helvetica(6em, white);
       }
       a {
         float: left;
-        width: 33.33%;
+        width: 25%;
         text-align: center;
         padding-top: 1em;
         padding-bottom: 1em;
         font-weight: lighter;
         text-decoration: none;
         border-top: $border-style;
-        @include helvetica(1em, black);
-        background-color: white;
+        @include helvetica(1em, white);
+        background-color: transparent;
+        // opacity: 0.8;
         &:hover {
-          background-color: transparent;
-          color: white;
-          text-decoration: underline;
-          // @include one-border(top, orange);
+          color: black;
+          background-color: white;
         }
       }
     }
@@ -84,16 +84,26 @@
       width: 60%;
       margin-left: 20%;
       border-bottom: $border-style;
+      border-left: $border-style;
+      border-right: $border-style;
+      @include futura(1em, white);
+      &:hover {
+        color: black;
+        background-color: white;
+      }
 
       .about-container {
         margin-top: 3em;
         margin-bottom: 3em;
         margin-left: 2em;
         margin-right: 2em;
+
         p {
           padding-left: 4em;
           padding-right: 4em;
-          @include futura(1em, white);
+          a {
+            color: black;
+          }
         }
       }
     }
@@ -113,7 +123,12 @@
           border-bottom: $border-style;
           border-right: $border-style;
           text-align: center;
+          background-color: transparent;
           @include futura(1em, white);
+          &:hover {
+            background-color: white;
+            color: black;
+          }
         }
       }
     }
@@ -150,7 +165,7 @@
 
   body {
     margin: 0;
-    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'rainbow.jpg' %>)fixed no-repeat;
     -webkit-background-size: 150%;
     background-size: 150%;
   }
@@ -264,7 +279,7 @@
 
   body {
     margin: 0;
-    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'rainbow.jpg' %>)fixed no-repeat;
     -webkit-background-size: 180%;
     background-size: 180%;
   }
@@ -380,7 +395,7 @@
 
   body {
     margin: 0;
-    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'rainbow.jpg' %>)fixed no-repeat;
     -webkit-background-size: 300%;
     background-size: 300%;
   }
@@ -494,7 +509,7 @@
 
   body {
     margin: 0;
-    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'rainbow.jpg' %>)fixed no-repeat;
     -webkit-background-size: 400%;
     background-size: 400%;
   }
