@@ -46,7 +46,7 @@
 
   #top {
     height: 90%;
-    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
     -webkit-background-size: 100%;
     background-size: 100%;
     .title {
@@ -147,7 +147,7 @@
 
   body {
     margin: 0;
-    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
     -webkit-background-size: 150%;
     background-size: 150%;
   }
@@ -261,7 +261,7 @@
 
   body {
     margin: 0;
-    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
     -webkit-background-size: 180%;
     background-size: 180%;
   }
@@ -377,7 +377,7 @@
 
   body {
     margin: 0;
-    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
     -webkit-background-size: 300%;
     background-size: 300%;
   }
@@ -491,7 +491,7 @@
 
   body {
     margin: 0;
-    background: url(<%= asset_path 'calipixel.jpg' %>)fixed no-repeat;
+    background: url(<%= asset_path 'calipixel-lowres.jpg' %>)fixed no-repeat;
     -webkit-background-size: 400%;
     background-size: 400%;
   }
@@ -525,10 +525,8 @@
         text-decoration: none;
         box-shadow: 0px 3px 0px white;
         @include futura(1em, white);
-
         padding-top: 1em;
         padding-bottom: 1em;
-        opacity: 0.8;
       }
     }
 
@@ -574,11 +572,14 @@
       float: left;
       width: 100%;
       margin-top: 1em;
+      padding-bottom: 1em;
       a {
         width: 100%;
-        float: left;
+        padding-bottom: 5em;
+        float: none;
         text-decoration: none;
         text-align: center;
+        
         @include futura(1em, white);
 
       }
@@ -587,8 +588,4 @@
 
 }
 
-// // iPhone portrait mode
-// @media screen and (max-width: 320px) {
-
-// }
 
